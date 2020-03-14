@@ -1,8 +1,8 @@
-open_file = open('D:/Quizzes/quiz.txt', 'r') # change to your directory
+open_file = open('D:/Quizzes/sample_quiz.txt', 'r') # change to your directory
 read_file = open_file.read()
 quiz_file = read_file.splitlines()
 
-numbers = ["1. ", "2. ", "3. ", "4. ", "5. "]
+numbers = ["1. ", "2. ", "3. ", "4. ", "5. ", "6. ", "7. ", "8. ", "9. ", "10. ", "11. ", "12. ", "13. ", "14. ", "15. "]
 
 class Question:
     def __init__(self, qumber, asnum):
@@ -24,7 +24,10 @@ class Question:
 
         one_answer = str(real_answers[asnum])
         fixed_answer = one_answer.replace("['", "")
-        right_answer = fixed_answer[:3]
+        digit = 3
+        if len(answer) >= 4:
+            digit += 1
+        right_answer = fixed_answer[:digit]
         if answer == right_answer:
             print("Your answer is correct!")
         else:
@@ -51,7 +54,7 @@ ob.asnum = 3
 ob.quiz(ob.qumber, ob.asnum)
 
 ob = Question(qumber = "5.", asnum = 4) # asnum starts from 0
-ob.qumber = "5." # question number 5 
+ob.qumber = "5."  # question number 5
 ob.asnum = 4
 ob.quiz(ob.qumber, ob.asnum)
 
@@ -59,8 +62,8 @@ ob.quiz(ob.qumber, ob.asnum)
 add more questions if you need to.
 to add more questions simply copy the last line and change
 qumber to your question number, and asnum to an integer 
-which is qumber's number -1 
-currently this program only supports up to 10 questions
-this will be changed later on
+which is qumber's number -1 (assuming all questions are in order by number)
+and if you have more than 15 questions add their numbers as in the example to
+the numbers list
 '''
 
