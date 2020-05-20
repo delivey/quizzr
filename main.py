@@ -46,12 +46,5 @@ for i in range(0, questions):
     ob.quiz(ob.qumber, ob.asnum)
 
 print(f"You correctly answered {right_answers} questions!")
-'''
-add more questions if you need to.
-to add more questions simply copy the last line and change
-qumber to your question number, and asnum to an integer 
-which is qumber's number -1 (assuming all questions are in order by number)
-and if you have more than 15 questions add their numbers as in the example to
-the numbers list
-'''
+
 
