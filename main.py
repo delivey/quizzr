@@ -1,8 +1,12 @@
-open_file = open('C:/Users/Domantas/Desktop/quizzr/sample_quiz.txt', 'r') # change to your directory
+open_file = open('C:/sample_quiz.txt', 'r') # change to your directory
 read_file = open_file.read()
 quiz_file = read_file.splitlines()
 
-numbers = ["1. ", "2. ", "3. ", "4. ", "5. ", "6. ", "7. ", "8. ", "9. ", "10. ", "11. ", "12. ", "13. ", "14. ", "15. "]
+numbers = []
+for i in range(1, 100):
+    num = f"{i}. "
+    numbers.append(num)
+    
 right_answers = 0
 
 class Question:
